@@ -1,0 +1,488 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+
+@media only screen and (max-width: 992px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #generator,
+    #generated {
+        width: 100% !important;
+
+    }
+
+    #generator {
+        margin-bottom: 50px;
+    }
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    background-color: #101820ff;
+    color: #fee715ff;
+
+    >header {
+        width: 100%;
+        background-color: #101820ff;
+        padding: 20px;
+    }
+
+    >main {
+        width: 100%;
+        display: flex;
+
+        >#generator {
+            width: 350px;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            >li {
+                list-style-type: none;
+                cursor: pointer;
+                overflow: hidden;
+                margin-top: 10px;
+
+                >h4 {
+                    color: #fee715ff;
+                    border-bottom: 1px solid #fee715ff;
+                    padding: 10px 15px;
+                    border-radius: 5px;
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 10px 0;
+                }
+            }
+
+            >.alpha {
+                width: 100%;
+                /* margin-top: 30px; */
+
+                >div {
+                    display: flex;
+                    flex-direction: column;
+
+                    >div {
+                        display: flex;
+
+                        >div {
+                            display: flex;
+                            flex-direction: column;
+                            padding: 5px;
+                            align-items: center;
+                            justify-content: center;
+
+                            >input {
+                                width: 100%;
+                                border-radius: 5px;
+                                padding: 5px;
+                                border: none;
+                                outline: none;
+
+                                &[type=color] {
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .transform {
+                width: 100%;
+
+                >.parent {
+                    >div {
+                        display: flex;
+                        flex-direction: column;
+
+                        >label {
+                            margin: 10px 0;
+                        }
+
+                        >div {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            position: relative;
+
+                            >span {
+                                position: absolute;
+                                top: -10px;
+                                right: 0;
+                            }
+
+                            >input {
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .border {
+                >.parent {
+                    >div {
+                        display: flex;
+                        flex-direction: column;
+
+                        >label {
+                            margin: 15px 0;
+                        }
+
+                        >div {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 100%;
+                            text-align: left;
+                            position: relative;
+
+
+                            >span {
+                                position: absolute;
+                                top: -10px;
+                                right: 0;
+                            }
+
+
+
+                            >label {
+                                text-align: left;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+
+                .borderCC {
+                    flex-direction: row !important;
+                    margin-top: 10px;
+
+                    >div {
+                        display: flex;
+                        flex-direction: column;
+                        padding: 5px;
+
+                        >input {
+                            width: 100%;
+                            border-radius: 5px;
+                            padding: 5px;
+                            border: none;
+                            outline: none;
+
+                            &[type=color] {
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            .gradient {
+                text-align: center;
+
+                >.parent {
+
+                    >#gradientForm {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: left;
+
+                        * {
+                            width: 100%;
+                        }
+
+                        >button {
+                            background-color: #fee715ff;
+                            padding: 5px;
+                            border: none;
+                            outline: none;
+                            border-radius: 5px;
+                            cursor: pointer;
+                        }
+
+                        >input {
+                            border-radius: 5px;
+                            padding: 5px;
+                            border: none;
+                            outline: none;
+                            cursor: pointer;
+                        }
+
+
+                    }
+                }
+            }
+
+
+            .gradient-preview {
+                width: 300px;
+                height: 200px;
+                /* margin: 20px auto; */
+                background: linear-gradient(45deg, #ff7e5f, #feb47b);
+            }
+
+            form {
+                margin-bottom: 20px;
+            }
+
+            input[type="color"],
+            input[type="number"],
+            select {
+                margin: 10px;
+            }
+
+            textarea {
+                width: 100%;
+                height: 100px;
+                margin-top: 20px;
+                padding: 10px;
+                font-family: monospace;
+            }
+
+
+            .box-shadow,
+            .text-shadow {
+                >.parent {
+
+                    >div {
+                        display: flex;
+                        flex-direction: column;
+                        padding: 5px;
+
+                        >div {
+                            display: flex;
+                            padding: 5px;
+                            align-items: center;
+                            justify-content: center;
+                            position: relative;
+
+                            >span {
+                                position: absolute;
+                                top: -10px;
+                                right: 0;
+                            }
+
+                            >input[type="range"] {
+                                margin-right: 5px;
+
+                            }
+
+                            >input:not([type="range"]) {
+                                width: 100%;
+                                border-radius: 5px;
+                                padding: 5px;
+                                border: none;
+                                outline: none;
+
+
+                                &[type=color] {
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+
+
+
+                    }
+
+                    .colorShadow {
+                        flex-direction: row;
+
+                        >div {
+
+                            flex-direction: column;
+
+                        }
+                    }
+                }
+            }
+
+            .text-rotate {
+
+                .parent {
+
+                    >div {
+                        display: flex;
+                        flex-direction: column;
+                        padding: 5px;
+
+                        >div {
+                            display: flex;
+                            padding: 5px;
+                            align-items: center;
+                            justify-content: center;
+                            position: relative;
+
+                            >span {
+                                position: absolute;
+                                top: -10px;
+                                right: 0;
+                            }
+
+                            >input[type="range"] {
+                                margin-right: 5px;
+
+                                &[type=color] {
+                                    cursor: pointer;
+                                }
+                            }
+
+
+
+                        }
+
+
+                    }
+                }
+            }
+
+
+
+            .filter {
+                .parent {
+                    display: flex;
+
+                    flex-direction: column;
+
+                    >div {
+                        display: flex;
+                        flex-direction: column;
+                        padding: 5px;
+
+                        >div {
+                            display: flex;
+                            padding: 5px;
+                            align-items: center;
+                            justify-content: center;
+                            position: relative;
+
+                            >span {
+                                position: absolute;
+                                top: -10px;
+                                right: 0;
+                            }
+
+                            >input[type="range"] {
+                                margin: 5px 0;
+
+                            }
+
+                        }
+
+
+                    }
+                }
+            }
+        }
+
+        >#generated {
+            width: 75%;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            overflow: hidden;
+
+            >div {
+                width: 100%;
+                height: 70%;
+                background-color: #7b81fe;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+
+                .bdf {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: transparent;
+                }
+
+                >div {
+                    width: 300px;
+                    height: 200px;
+                    background-color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: black;
+
+                }
+            }
+
+            >ul {
+                padding: 10px;
+                width: 100%;
+                list-style: none;
+                text-align: left;
+
+
+            }
+
+        }
+
+    }
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #fee715ff;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 15rem;
+    height: 2px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #101820ff;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #fee715ff;
+}
+
+select {
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fee715ff;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+.parent {
+    transition: 0.4s;
+}
+
+h4 {
+    >* {
+        pointer-events: none;
+    }
+
+    >i {
+        transition: 0.4s;
+    }
+}

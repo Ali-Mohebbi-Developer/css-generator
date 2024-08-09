@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>css generator</h1>
+    </header>
+    <main>
+        <ul id="generator">
+
+            <li class="alpha">
+                <h4 data-status="off"><span>Alpha (RGBA)</span> <i class="bi bi-chevron-down"></i></h4>
+                <div class="parent">
+                    <label for="rgba">Properties : </label>
+                    <select name="rgba" id="rgba">
+                        <option value="background">background</option>
+                        <option value="color">color</option>
+                    </select>
+                    <div>
+                        <div>
+                            <label for="color">Color</label>
+                            <input id="color" type="color">
+                        </div>
+                        <div>
+                            <label for="r">R</label>
+                            <input id="r" type="number" min="0" max="255">
+                        </div>
+                        <div>
+                            <label for="g">G</label>
+                            <input id="g" type="number" min="0" max="255">
+                        </div>
+                        <div>
+                            <label for="b">B</label>
+                            <input id="b" type="number" min="0" max="255">
+                        </div>
+                        <div>
+                            <label for="a">A</label>
+                            <input id="a" type="number" min="0" max="1" step="0.1">
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="transform">
+                <h4 data-status="off"><span>CSS Transforms</span> <i class="bi bi-chevron-down"></i></h4>
+                <div class="parent">
+                    <div>
+                        <label for="rotate">Rotate : </label>
+                        <div>
+                            <input id="rotate" type="range" value="0" min="0" max="360">
+                            <span>0</span>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="scaleX">Scale X :</label>
+                        <div>
+                            <input id="scaleX" type="range" value="1" min="-1" max="4" step="0.1">
+                            <span>1</span>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="scaleY">Scale Y : </label>
+                        <div>
+                            <input id="scaleY" type="range" value="1" min="-1" max="4" step="0.1">
+                            <span>1</span>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="skewX">Skew X : </label>
+                        <div>
+                            <input id="skewX" type="range" value="0" min="-50" max="50">
+                            <span>0</span>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="skewY">Skew Y : </label>
+                        <div>
+                            <input id="skewY" type="range" value="0" min="-50" max="50">
+                            <span>0</span>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="translateX">Translate X : </label>
+                        <div>
+                            <input id="translateX" type="range" value="0" min="-200" max="200">
+                            <span>0</span>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="translateY">Translate Y : </label>
+                        <div>
+                            <input id="translateY" type="range" value="0" min="-200" max="200">
+                            <span>0</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+
+            <li class="border">
+                <h4 data-status="off"><span>border</span> <i class="bi bi-chevron-down"></i></h4>
+                <div class="parent">
+                    <div>
+                        <label for="borderStyle">Style : </label>
+                        <select name="borderStyle" id="borderStyle">
+                            <option value="solid">solid</option>
+                            <option value="dashed">dashed</option>
+                            <option value="dotted">dotted</option>
+                            <option value="double">double</option>
+                            <option value="none">none</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="borderRadius">Border Radius : </label>
+                        <div>
+                            <input id="borderRadius" type="range" value="0" min="0" max="75">
+                            <span>0</span>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="borderWidth">Border Width : </label>
+                        <div>
+                            <input id="borderWidth" type="range" value="0" min="0" max="50">
+                            <span>0</span>
+                        </div>
+                    </div>
+                    <div class="borderCC">
+                        <div>
+                            <label for="borderColor">Color</label>
+                            <input id="borderColor" type="color">
+                        </div>
+                        <div>
+                            <label for="border-R">R</label>
+                            <input id="border-R" type="text" min="0" max="255">
+                        </div>
+                        <div>
+                            <label for="border-G">G</label>
+                            <input id="border-G" type="text" min="0" max="255">
+                        </div>
+                        <div>
+                            <label for="border-B">B</label>
+                            <input id="border-B" type="text" min="0" max="255">
+                        </div>
+                        <div>
+                            <label for="border-A">A</label>
+                            <input id="border-A" type="text" min="0" max="1" step="0.1">
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="gradient">
+                <h4 data-status="off"><span>CSS Gradient Generator</span> <i class="bi bi-chevron-down"></i></h4>
+                <div class="parent">
+                    <div id="gradientForm">
+                        <label for="gradientType">Gradient Type:</label>
+                        <select id="gradientType">
+                            <option value="linear">Linear Gradient</option>
+                            <option value="radial">Radial Gradient</option>
+                            <option value="conic">Conic Gradient</option>
+                        </select>
+                        <label for="color1">Color 1:</label>
+                        <input type="color" id="color1">
+                        <label for="color2">Color 2:</label>
+                        <input type="color" id="color2" value="#ffffff">
+                        <label for="angle">Angle:</label>
+                        <input type="number" id="angle" value="45" min="0" max="360">
+                        <button type="button" id="generate">Generate CSS</button>
+                    </div>
+                </div>
+            </li>
+
+            <li class="box-shadow">
+                <h4 data-status="off"><span>Box Shadow</span> <i class="bi bi-chevron-down"></i></h4>
+                <div class="parent">
+                    <div>
+                        <label for="xbs">X : </label>
+                        <div>
+                            <input id="xbs" type="range" value="0" min="-200" max="200">
+                            <span>0</span>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="ybs">Y :</label>
+                        <div>
+                            <input id="ybs" type="range" value="0" min="-200" max="200">
+                            <span>0</span>
+                        </div>
+                    </div>
+                    <div class="colorShadow">
+                        <div>
+                            <label for="box-color">Color</label>
+                            <input id="box-color" type="color">
+                        </div>
+                        <div>
+                            <label for="box-r">R</label>
+                            <input id="box-r" type="text" min="0" max="255">
+                        </div>
+                        <div>
+                            <label for="box-g">G</label>
+                            <input id="box-g" type="text" min="0" max="255">
+                        </div>
+                        <div>
+                            <label for="box-b">B</label>
+                            <input id="box-b" type="text" min="0" max="255">
+                        </div>
+                        <div>
+                            <label for="box-a">A</label>
+                            <input id="box-a" type="text" min="0" max="1" step="0.1">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="blur">Blur : </label>
+                        <div>
+                            <input id="blur" type="range" value="0" min="0" max="200">
+                            <span>0</span>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="spread">Spread :</label>
+                        <div>
+                            <input id="spread" type="range" value="0" min="0" max="200">
+                            <span>0</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="text-shadow">
+                <h4 data-status="off"><span>Text Shadow</span> <i class="bi bi-chevron-down"></i></h4>
+                <div class="parent">
+                    <div>
+                        <label for="text-shadow-x">Text Shadow X:</label>
+                        <div>
+                            <input id="text-shadow-x" type="range" value="0" min="-200" max="200">
+                            <span>0</span>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="text-shadow-y">Text Shadow Y:</label>
+                        <div>
+                            <input id="text-shadow-y" type="range" value="0" min="-200" max="200">
+                            <span>0</span>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="text-shadow-blur">Text Shadow Blur:</label>
+                        <div>
+                            <input id="text-shadow-blur" type="range" value="0" min="0" max="200">
+                            <span>0</span>
+                        </div>
+                    </div>
+                    <div class="colorShadow">
+                        <div>
+                            <label for="text-color">Color</label>
+                            <input id="text-color" type="color">
+                        </div>
+                        <div>
+                            <label for="text-r">R</label>
+                            <input id="text-r" type="text" min="0" max="255">
+                        </div>
+                        <div>
+                            <label for="text-g">G</label>
+                            <input id="text-g" type="text" min="0" max="255">
+                        </div>
+                        <div>
+                            <label for="text-b">B</label>
+                            <input id="text-b" type="text" min="0" max="255">
+                        </div>
+                        <div>
+                            <label for="text-a">A</label>
+                            <input id="text-a" type="text" min="0" max="1" step="0.1">
+                        </div>
+                    </div>
+
+            </li>
+
+            <li class="text-rotate">
+                <h4 data-status="off"><span>Text Rotation</span> <i class="bi bi-chevron-down"></i></h4>
+                <div class="parent">
+                    <div>
+                        <label for="xtr">Rotate : </label>
+                        <div>
+                            <input id="xtr" type="range" value="0" min="-200" max="200">
+                            <span>0</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="filter">
+                <h4 data-status="off"><span>Backdrop Filter</span> <i class="bi bi-chevron-down"></i></h4>
+                <div class="parent">
+                    <label for="filterD">Type : </label>
+                    <select id="filterD">
+                        <option value="blur">Blur</option>
+                        <option value="brightness">Brightness</option>
+                        <option value="contrast">contrast</option>
+                        <option value="grayScale">GrayScale</option>
+                        <option value="hue">Hue Rotate</option>
+                        <option value="invert">Invert</option>
+                        <option value="saturate">Saturate</option>
+                        <option value="sepia">Sepia</option>
+                    </select>
+                    <div>
+                        <label for="percentage">Percentage : </label>
+                        <div>
+                            <input id="percentage" type="range" value="0" min="0" max="70" step="0.1">
+                            <span>0</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div id="generated">
+            <div>
+                <div id="box">
+                    <span>Insert Your Styles</span>
+                </div>
+                <div class="bdf"></div>
+            </div>
+            <ul id="print">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </main>
+    <!-- <footer></footer> -->
+    <script src="script.js"></script>
+</body>
+
+</html>
